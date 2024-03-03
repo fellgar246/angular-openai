@@ -39,4 +39,8 @@ export class OpenAiService {
   imageGeneration(prompt: string, originalImage?: string, maskImage?: string) {
     return from(imageGenerationUseCase(prompt, originalImage, maskImage));
   }
+
+  imageVariation( originalImage: string ) {
+    return from(imageGenerationUseCase(originalImage));
+  }
 }
